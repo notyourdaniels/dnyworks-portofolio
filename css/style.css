@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  transition: background 0.2s linear;
+}
+
+body.dark {
+  background-color: #3e3e3e;
+  transition: background 0.2s linear;
+}
+
+header {
+  display: fixed;
+  margin: 0;
+  align-items: center;
+  padding: 40px 100px;
+  background-color: #fff;
+  transition: background 0.2s linear;
+}
+
+body.dark header {
+  background-color: #3e3e3e;
+  transition: background 0.2s linear;
+}
+
+.header-wrapper {
+  display: flex;
+}
+
+header .logo-header {
+  width: 220px;
+  height: 50px;
+  background-image: url("../icons/dnyworks-light.svg");
+  background-size: 220px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+}
+
+body.dark header .logo-header {
+  background-image: url("../icons/dnyworks-dark.svg");
+}
+
+.container-nav {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+header ul {
+  justify-content: end;
+  width: 500px;
+}
+
+body.dark header ul li {
+  color: #fff;
+}
+
+header ul li {
+  display: inline-block;
+  color: #41413f;
+  font-family: "Nunito";
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0px 20px;
+}
+
+.checkbox {
+  opacity: 0;
+}
+
+.label {
+  background-color: #c9cece;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 16px;
+  width: 40px;
+  transform: scale(1.5);
+}
+
+.ball {
+  background-color: #ffffff;
+  background-image: url("../icons/sun.svg");
+  background-size: contain;
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  transform: translateX(0px);
+  transition: 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(21px);
+  background-image: url("../icons/moon.svg");
+  background-color: #3e3e3e;
+  transition: 0.2s linear;
+}
+
+.contents {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}

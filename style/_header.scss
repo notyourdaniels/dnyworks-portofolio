@@ -1,0 +1,107 @@
+header {
+  position: fixed;
+  margin: 0;
+  align-items: center;
+  padding: 40px 7%;
+  transition: background 0.2s linear;
+  .header-wrapper {
+    display: flex;
+    .logo-header {
+      width: 220px;
+      height: 50px;
+      background-image: $dnyLight;
+      background-size: 220px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .container-nav {
+      display: flex;
+      margin-left: auto;
+      align-items: center;
+      ul {
+        justify-content: end;
+        width: 500px;
+        li {
+          display: inline-block;
+          color: $textLight;
+          font-family: "Nunito";
+          font-weight: bold;
+          font-size: 18px;
+          text-align: center;
+          text-transform: uppercase;
+          margin: 0px 20px;
+          //   transition: height 1s linear;
+          &:hover {
+            // border-radius: 10px;
+            // height: 6px;
+            // width: auto;
+            // box-shadow: 0 30px 0 0 $textLight;
+            // transform: translateX(100px);
+            border-bottom: 5px solid white;
+          }
+        }
+      }
+    }
+    .checkbox {
+      opacity: 0;
+    }
+
+    .label {
+      background-color: #c9cece;
+      border-radius: 50px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 5px;
+      position: relative;
+      height: 16px;
+      width: 40px;
+      transform: scale(1.5);
+      .ball {
+        background-color: #ffffff;
+        background-image: url("../icons/sun.svg");
+        background-size: contain;
+        background-size: 12px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        transform: translateX(0px);
+        transition: 0.2s linear;
+      }
+    }
+
+    .checkbox:checked + .label .ball {
+      transform: translateX(21px);
+      background-image: url("../icons/moon.svg");
+      background-color: #3e3e3e;
+      transition: 0.2s linear;
+    }
+  }
+}
+
+header.solid {
+  background-color: #ffffff;
+}
+
+// darkmode version
+body.dark header {
+  transition: background 0.2s linear;
+  .logo-header {
+    background-image: $dnyDark;
+  }
+  .container-nav {
+    ul {
+      li {
+        color: $textDark;
+      }
+    }
+  }
+}
+
+body.dark header.solid {
+  background-color: #3e3e3e;
+}

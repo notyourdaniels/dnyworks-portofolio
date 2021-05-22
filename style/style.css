@@ -1,0 +1,165 @@
+header {
+  position: fixed;
+  margin: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 7%;
+  -webkit-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+
+header .header-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header-wrapper .logo-header {
+  width: 220px;
+  height: 50px;
+  background-image: url("../icons/dnyworks-light.svg");
+  background-size: 220px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+header .header-wrapper .container-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-wrapper .container-nav ul {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  width: 500px;
+}
+
+header .header-wrapper .container-nav ul li {
+  display: inline-block;
+  color: #41413f;
+  font-family: "Nunito";
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0px 20px;
+}
+
+header .header-wrapper .container-nav ul li:hover {
+  border-bottom: 5px solid white;
+}
+
+header .header-wrapper .checkbox {
+  opacity: 0;
+}
+
+header .header-wrapper .label {
+  background-color: #c9cece;
+  border-radius: 50px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 16px;
+  width: 40px;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+header .header-wrapper .label .ball {
+  background-color: #ffffff;
+  background-image: url("../icons/sun.svg");
+  background-size: contain;
+  background-size: 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+header .header-wrapper .checkbox:checked + .label .ball {
+  -webkit-transform: translateX(21px);
+          transform: translateX(21px);
+  background-image: url("../icons/moon.svg");
+  background-color: #3e3e3e;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+header.solid {
+  background-color: #ffffff;
+}
+
+body.dark header {
+  -webkit-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+
+body.dark header .logo-header {
+  background-image: url("../icons/dnyworks-dark.svg");
+}
+
+body.dark header .container-nav ul li {
+  color: #cccccc;
+}
+
+body.dark header.solid {
+  background-color: #3e3e3e;
+}
+
+.contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contents .contents-wrapper {
+  width: 1200px;
+  height: 200vh;
+  background-color: red;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+  -webkit-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+
+body.dark {
+  background-color: #3e3e3e;
+  -webkit-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+/*# sourceMappingURL=style.css.map */

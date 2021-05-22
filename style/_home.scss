@@ -1,0 +1,10 @@
+.contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .contents-wrapper {
+    width: 1200px;
+    height: 200vh;
+    background-color: red;
+  }
+}

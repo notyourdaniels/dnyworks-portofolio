@@ -6,34 +6,52 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon">  
         <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/fullpage.css">
         <script src="js/darkmode.js" defer></script>
     </head>
     <body>
         <header>
-           <div class='header-wrapper'>
-               <div class='logo-header'></div>
-                <div class='container-nav'>
+            <div class='container'>
+                <a href='#' class='logo-header'></a>
+                <nav>
                     <ul>
                         <li>Home</li>
                         <li>About</li>
                         <li>Work</li>
                         <li>Contact</li>
                     </ul>
-                    <input type="checkbox" class="checkbox" id="check" />
-                    <label class="label" for="check">
-                        <div class="ball"></div>
-                    </label>
-                </div>
-           </div>
-           
+                    <div class='darkslider'>
+                        <input type="checkbox" class="checkbox" id="check" />
+                        <label class="label" for="check">
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </nav>
+            </div>
         </header>
 
-        <div class='contents'>
-            <div class='contents-wrapper'>
-                <h1>Hello</h1>
+        <div class='home-contents'>
+            <div id="fullPage">
+                <div class="section s1">
+                    <div id='greetings-1'>Hello</div>
+                    <div id='action-swipe'>swipe down</div>
+                </div>
+                <div class="section s2">
+                    <div id='greetings-2'>Welcome to My</div>
+                    <div id='greetings-3'>Portfolio !</div>
+                </div>
             </div>
         </div>
         
+        <script src='js/langchanger.js'></script>
+        <script src='js/fullpage.js'></script>
+        <script>
+            new fullpage('#fullPage', {
+                autoScrolling: true,
+                scrollHorizontally: true
+            })
+        </script>
     </body>
 </html>

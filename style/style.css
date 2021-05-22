@@ -1,47 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Nunito:wght@300;400;700&display=swap");
 header {
   position: fixed;
+  width: 100%;
+  background-color: transparent;
   margin: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 40px 7%;
-  -webkit-transition: background 0.2s linear;
-  transition: background 0.2s linear;
+  z-index: 3;
 }
 
-header .header-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+header .container {
+  max-width: 1600px;
+  padding: 50px 50px;
+  position: relative;
+  margin: 0 auto;
 }
 
-header .header-wrapper .logo-header {
+header .container .logo-header {
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url("../icons/logo_light.png") no-repeat;
+  background-size: 220px;
   width: 220px;
   height: 50px;
-  background-image: url("../icons/dnyworks-light.svg");
-  background-size: 220px;
-  background-repeat: no-repeat;
-  background-position: center;
+  float: left;
+  margin-top: -26px;
 }
 
-header .header-wrapper .container-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+header .container nav {
+  float: right;
+  margin: 0 auto;
+  margin-top: -15px;
 }
 
-header .header-wrapper .container-nav ul {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  width: 500px;
+header .container nav ul {
+  display: inline-block;
 }
 
-header .header-wrapper .container-nav ul li {
+header .container nav ul li {
   display: inline-block;
   color: #41413f;
   font-family: "Nunito";
@@ -49,18 +44,20 @@ header .header-wrapper .container-nav ul li {
   font-size: 18px;
   text-align: center;
   text-transform: uppercase;
-  margin: 0px 20px;
+  margin-right: 50px;
 }
 
-header .header-wrapper .container-nav ul li:hover {
-  border-bottom: 5px solid white;
+header .container nav .darkslider {
+  float: right;
+  margin-top: -19px;
+  display: block;
 }
 
-header .header-wrapper .checkbox {
+header .container nav .darkslider .checkbox {
   opacity: 0;
 }
 
-header .header-wrapper .label {
+header .container nav .darkslider .label {
   background-color: #c9cece;
   border-radius: 50px;
   cursor: pointer;
@@ -70,18 +67,14 @@ header .header-wrapper .label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 5px;
-  position: relative;
-  height: 16px;
+  height: 18px;
   width: 40px;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
-header .header-wrapper .label .ball {
+header .container nav .darkslider .label .ball {
   background-color: #ffffff;
   background-image: url("../icons/sun.svg");
   background-size: contain;
@@ -98,7 +91,7 @@ header .header-wrapper .label .ball {
   transition: 0.2s linear;
 }
 
-header .header-wrapper .checkbox:checked + .label .ball {
+header .container nav .darkslider .checkbox:checked + .label .ball {
   -webkit-transform: translateX(21px);
           transform: translateX(21px);
   background-image: url("../icons/moon.svg");
@@ -116,11 +109,12 @@ body.dark header {
   transition: background 0.2s linear;
 }
 
-body.dark header .logo-header {
-  background-image: url("../icons/dnyworks-dark.svg");
+body.dark header .container .logo-header {
+  background: url("../icons/logo_dark.png") no-repeat;
+  background-size: 220px;
 }
 
-body.dark header .container-nav ul li {
+body.dark header .container nav ul li {
   color: #cccccc;
 }
 
@@ -128,22 +122,22 @@ body.dark header.solid {
   background-color: #3e3e3e;
 }
 
-.contents {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.home-contents .section {
+  text-align: center;
 }
 
-.contents .contents-wrapper {
-  width: 1200px;
-  height: 200vh;
-  background-color: red;
+.home-contents .s1 #greetings-1 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 300px;
+  color: #008fff;
+  opacity: 1;
+  -webkit-transition: opacity 3s ease-in-out;
+  transition: opacity 3s ease-in-out;
+}
+
+body.dark .s1 #greetings-1 {
+  color: #44adff;
 }
 
 * {

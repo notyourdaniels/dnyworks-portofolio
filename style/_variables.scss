@@ -2,6 +2,20 @@
 $textLight: #41413f;
 $textDark: #cccccc;
 
+$blueLight: #008fff;
+$blueDark: #44adff;
+
+@mixin nunito($weight) {
+  font-family: "Nunito", sans-serif;
+  @if $weight == light {
+    font-weight: 300;
+  } @else if $weight == bold {
+    font-weight: 700;
+  } @else if $weight == normal {
+    font-weight: 400;
+  }
+}
+
 //DNYWORKS LOGO
-$dnyLight: url("../icons/dnyworks-light.svg");
-$dnyDark: url("../icons/dnyworks-dark.svg");
+$dnyLight: url("../icons/logo_light.png");
+$dnyDark: url("../icons/logo_dark.png");

@@ -124,19 +124,107 @@ body.dark header.solid {
 
 .home-contents .section {
   text-align: center;
+  display: block;
 }
 
 .home-contents .s1 #greetings-1 {
   font-family: "Nunito", sans-serif;
   font-weight: 700;
-  font-size: 300px;
+  font-size: 200px;
   color: #008fff;
   opacity: 1;
-  -webkit-transition: opacity 3s ease-in-out;
-  transition: opacity 3s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.home-contents .s1 #action-swipe {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  margin-top: -20px;
+  font-size: 25px;
+  color: #41413f;
+  opacity: 1;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.home-contents .s2 #greetings-2 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 90px;
+  color: #008fff;
+  opacity: 1;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.home-contents .s2 #greetings-3 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  margin-top: -18px;
+  font-size: 90px;
+  color: #008fff;
+  opacity: 1;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.home-contents .s2 #button-info {
+  display: absolute;
+  margin-top: 70px;
+}
+
+.home-contents .s2 #button-info .button1 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  background-color: #008fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  width: 550px;
+}
+
+.home-contents .s2 #button-info #button-container {
+  margin: 0 auto;
+}
+
+.home-contents .s2 #button-info #button-container .button2 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  position: relative;
+  background-color: transparent;
+  border: 2px solid #008fff;
+  border-radius: 50px;
+  cursor: pointer;
+  color: #008fff;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  width: 270px;
+  margin: 15px 5px;
 }
 
 body.dark .s1 #greetings-1 {
+  color: #44adff;
+}
+
+body.dark .s1 #action-swipe {
+  color: #cccccc;
+}
+
+body.dark .s2 #greetings-2 {
+  color: #44adff;
+}
+
+body.dark .s2 #greetings-3 {
   color: #44adff;
 }
 

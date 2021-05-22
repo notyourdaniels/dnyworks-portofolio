@@ -1,4 +1,4 @@
-let lang = [
+const lang = [
   ["Hello", "scroll down", "Welcome to My", "Portfolio !"],
   ["Halo", "geser ke bawah", "Selamat Datang di", "Portofolio Saya !"],
   ["こんにちは", "下へスクロール", "私のポートフォリオへ", "ようこそ !"],
@@ -13,20 +13,56 @@ const greetings3 = document.getElementById("greetings-3");
 const actionSwipe = document.getElementById("action-swipe");
 // greetings1.innerHTML = "Coba";
 
+const sleep = (delay) => new Promise((resolve) => setTimeout(resolve, delay));
+
+const text = (count) => {
+  greetings1.innerHTML = lang[count][0];
+  actionSwipe.innerHTML = lang[count][1];
+  greetings2.innerHTML = lang[count][2];
+  greetings3.innerHTML = lang[count][3];
+};
+
+const opacity = (value) => {
+  greetings1.style.opacity = value;
+  actionSwipe.style.opacity = value;
+  greetings2.style.opacity = value;
+  greetings3.style.opacity = value;
+};
+
 let counter = 1;
-setInterval(() => {
-  if (counter > lang.length - 1) {
+let begin = false;
+let intervalText = 6000;
+const transition = async () => {
+  if (!begin) {
+    text(0);
+    await sleep(intervalText);
+    begin = true;
+    transition();
+  } else if (counter == lang.length - 1) {
+    opacity(0);
+    await sleep(1000);
+    opacity(1);
+    text(counter);
+    await sleep(intervalText);
     counter = 0;
-    greetings1.innerHTML = lang[counter][0];
-    actionSwipe.innerHTML = lang[counter][1];
-    greetings2.innerHTML = lang[counter][2];
-    greetings3.innerHTML = lang[counter][3];
-    counter++;
+    transition();
   } else {
-    greetings1.innerHTML = lang[counter][0];
-    actionSwipe.innerHTML = lang[counter][1];
-    greetings2.innerHTML = lang[counter][2];
-    greetings3.innerHTML = lang[counter][3];
+    opacity(0);
+    await sleep(1000);
+    opacity(1);
+    text(counter);
     counter++;
+    await sleep(intervalText);
+    transition();
   }
-}, 1000);
+};
+
+transition();
+
+// counter = 0;
+// opacity(0);
+// await sleep(intervalText);
+// opacity(1);
+// text(counter);
+// counter++;
+// await sleep(intervalText);

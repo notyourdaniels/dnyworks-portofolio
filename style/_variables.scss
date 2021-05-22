@@ -16,6 +16,17 @@ $blueDark: #44adff;
   }
 }
 
+@mixin lato($weight) {
+  font-family: "Lato", sans-serif;
+  @if $weight == light {
+    font-weight: 300;
+  } @else if $weight == bold {
+    font-weight: 700;
+  } @else if $weight == normal {
+    font-weight: 400;
+  }
+}
+
 //DNYWORKS LOGO
 $dnyLight: url("../icons/logo_light.png");
 $dnyDark: url("../icons/logo_dark.png");

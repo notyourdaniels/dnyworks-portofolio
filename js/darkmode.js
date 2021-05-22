@@ -2,7 +2,6 @@ if (typeof Storage !== "undefined") {
   if (localStorage.darkMode === "true") {
     document.body.classList.toggle("dark");
     document.getElementById("check").checked = true;
-    console.log("hello");
   }
 }
 

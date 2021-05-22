@@ -1,20 +1,97 @@
 .home-contents {
   .section {
     text-align: center;
+    display: block;
   }
   .s1 {
     #greetings-1 {
       @include nunito(bold);
-      font-size: 300px;
+      font-size: 200px;
       color: $blueLight;
       opacity: 1;
-      transition: opacity 3s ease-in-out;
+      transition: opacity 1s ease-in-out; //must same with sleeptime on langchanger.js !
+    }
+    #action-swipe {
+      @include lato(light);
+      margin-top: -20px;
+      font-size: 25px;
+      color: $textLight;
+      opacity: 1;
+      transition: opacity 1s ease-in-out; //must same with sleeptime on langchanger.js !
+    }
+  }
+
+  .s2 {
+    #greetings-2 {
+      @include nunito(normal);
+      font-size: 90px;
+      color: $blueLight;
+      opacity: 1;
+      transition: opacity 1s ease-in-out; //must same with sleeptime on langchanger.js !
+    }
+    #greetings-3 {
+      @include nunito(bold);
+      margin-top: -18px;
+      font-size: 90px;
+      color: $blueLight;
+      opacity: 1;
+      transition: opacity 1s ease-in-out; //must same with sleeptime on langchanger.js !
+    }
+
+    #button-info {
+      display: absolute;
+      margin-top: 70px;
+      .button1 {
+        @include nunito(bold);
+        background-color: $blueLight;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        width: 550px;
+      }
+      #button-container {
+        margin: 0 auto;
+        .button2 {
+          @include nunito(bold);
+          position: relative;
+          background-color: transparent;
+          border: 2px solid $blueLight;
+          border-radius: 50px;
+          cursor: pointer;
+          color: $blueLight;
+          padding: 15px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 20px;
+          width: 270px;
+          margin: 15px 5px;
+        }
+      }
     }
   }
 }
 
 body.dark .s1 {
   #greetings-1 {
+    color: $blueDark;
+  }
+  #action-swipe {
+    color: $textDark;
+  }
+}
+
+body.dark .s2 {
+  #greetings-2 {
+    color: $blueDark;
+  }
+  #greetings-3 {
     color: $blueDark;
   }
 }

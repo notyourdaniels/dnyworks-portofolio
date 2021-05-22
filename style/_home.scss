@@ -1,10 +1,20 @@
-.contents {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .contents-wrapper {
-    width: 1200px;
-    height: 200vh;
-    background-color: red;
+.home-contents {
+  .section {
+    text-align: center;
+  }
+  .s1 {
+    #greetings-1 {
+      @include nunito(bold);
+      font-size: 300px;
+      color: $blueLight;
+      opacity: 1;
+      transition: opacity 3s ease-in-out;
+    }
+  }
+}
+
+body.dark .s1 {
+  #greetings-1 {
+    color: $blueDark;
   }
 }

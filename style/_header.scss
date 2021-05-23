@@ -7,7 +7,7 @@ header {
 
   .container {
     max-width: 1600px;
-    padding: 50px 50px;
+    padding: 60px 60px;
     position: relative;
     margin: 0 auto;
     .logo-header {
@@ -24,7 +24,7 @@ header {
     nav {
       float: right;
       margin: 0 auto;
-      margin-top: -15px;
+      margin-top: -12px;
       ul {
         display: inline-block;
         li {
@@ -36,6 +36,33 @@ header {
           text-align: center;
           text-transform: uppercase;
           margin-right: 50px;
+          .link {
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+            margin-bottom: 0px;
+            padding-bottom: 5px;
+            color: inherit;
+            border-bottom: 5px solid transparent;
+            transition: 300ms ease-in-out;
+            &::after {
+              content: "";
+              position: absolute;
+              right: 0px;
+              width: 0px;
+              bottom: -5px;
+              background-color: $textLight;
+              height: 5px;
+              transition: width 300ms ease-in-out;
+            }
+
+            &:focus::after,
+            &:hover::after {
+              left: 0px;
+              right: auto;
+              width: 100%;
+            }
+          }
         }
       }
 
@@ -100,6 +127,9 @@ body.dark header {
       ul {
         li {
           color: $textDark;
+          .link::after {
+            background-color: $textDark;
+          }
         }
       }
     }

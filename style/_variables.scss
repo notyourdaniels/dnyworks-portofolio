@@ -5,6 +5,8 @@ $textDark: #cccccc;
 $blueLight: #008fff;
 $blueDark: #44adff;
 
+$buttonHoverLight: #007ad8;
+$buttonHoverDark: #007ad8;
 @mixin nunito($weight) {
   font-family: "Nunito", sans-serif;
   @if $weight == light {

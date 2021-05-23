@@ -9,7 +9,7 @@ header {
 
 header .container {
   max-width: 1600px;
-  padding: 50px 50px;
+  padding: 60px 60px;
   position: relative;
   margin: 0 auto;
 }
@@ -29,7 +29,7 @@ header .container .logo-header {
 header .container nav {
   float: right;
   margin: 0 auto;
-  margin-top: -15px;
+  margin-top: -12px;
 }
 
 header .container nav ul {
@@ -45,6 +45,36 @@ header .container nav ul li {
   text-align: center;
   text-transform: uppercase;
   margin-right: 50px;
+}
+
+header .container nav ul li .link {
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+  color: inherit;
+  border-bottom: 5px solid transparent;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+header .container nav ul li .link::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  width: 0px;
+  bottom: -5px;
+  background-color: #41413f;
+  height: 5px;
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+}
+
+header .container nav ul li .link:focus::after, header .container nav ul li .link:hover::after {
+  left: 0px;
+  right: auto;
+  width: 100%;
 }
 
 header .container nav .darkslider {
@@ -118,6 +148,10 @@ body.dark header .container nav ul li {
   color: #cccccc;
 }
 
+body.dark header .container nav ul li .link::after {
+  background-color: #cccccc;
+}
+
 body.dark header.solid {
   background-color: #3e3e3e;
 }
@@ -188,6 +222,14 @@ body.dark header.solid {
   display: inline-block;
   font-size: 20px;
   width: 550px;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.home-contents .s2 #button-info .button1:hover {
+  background-color: #007ad8;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
 }
 
 .home-contents .s2 #button-info #button-container {
@@ -210,6 +252,16 @@ body.dark header.solid {
   font-size: 20px;
   width: 270px;
   margin: 15px 5px;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.home-contents .s2 #button-info #button-container .button2:hover {
+  border-color: transparent;
+  background-color: #008fff;
+  color: white;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
 }
 
 body.dark .s1 #greetings-1 {
@@ -226,6 +278,31 @@ body.dark .s2 #greetings-2 {
 
 body.dark .s2 #greetings-3 {
   color: #44adff;
+}
+
+body.dark .s2 #button-info .button1 {
+  background-color: #44adff;
+}
+
+body.dark .s2 #button-info .button1:hover {
+  background-color: #008fff;
+}
+
+body.dark .s2 #button-info #button-container .button2 {
+  border-color: #44adff;
+  color: #44adff;
+}
+
+body.dark .s2 #button-info #button-container .button2:hover {
+  background-color: #44adff;
+  color: white;
+}
+
+.about-contents {
+  background-color: red;
+  width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
 }
 
 * {

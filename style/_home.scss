@@ -54,6 +54,11 @@
         display: inline-block;
         font-size: 20px;
         width: 550px;
+        transition: 200ms ease-in-out;
+        &:hover {
+          background-color: $buttonHoverLight;
+          transition: 200ms ease-in-out;
+        }
       }
       #button-container {
         margin: 0 auto;
@@ -72,6 +77,13 @@
           font-size: 20px;
           width: 270px;
           margin: 15px 5px;
+          transition: 200ms ease-in-out;
+          &:hover {
+            border-color: transparent;
+            background-color: $blueLight;
+            color: white;
+            transition: 200ms ease-in-out;
+          }
         }
       }
     }
@@ -93,5 +105,23 @@ body.dark .s2 {
   }
   #greetings-3 {
     color: $blueDark;
+  }
+  #button-info {
+    .button1 {
+      background-color: $blueDark;
+      &:hover {
+        background-color: $blueLight;
+      }
+    }
+    #button-container {
+      .button2 {
+        border-color: $blueDark;
+        color: $blueDark;
+        &:hover {
+          background-color: $blueDark;
+          color: white;
+        }
+      }
+    }
   }
 }

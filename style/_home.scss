@@ -1,4 +1,13 @@
 .home-contents {
+  svg {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    fill: #e3e3e3;
+    opacity: 60%;
+  }
   .section {
     text-align: center;
     display: block;
@@ -88,6 +97,10 @@
       }
     }
   }
+}
+
+body.dark .home-contents svg {
+  opacity: 10%;
 }
 
 body.dark .s1 {

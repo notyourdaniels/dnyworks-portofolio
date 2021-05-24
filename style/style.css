@@ -156,6 +156,17 @@ body.dark header.solid {
   background-color: #3e3e3e;
 }
 
+.home-contents svg {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  fill: #e3e3e3;
+  opacity: 60%;
+}
+
 .home-contents .section {
   text-align: center;
   display: block;
@@ -262,6 +273,10 @@ body.dark header.solid {
   color: white;
   -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
+}
+
+body.dark .home-contents svg {
+  opacity: 10%;
 }
 
 body.dark .s1 #greetings-1 {

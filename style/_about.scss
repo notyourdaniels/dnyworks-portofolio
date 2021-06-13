@@ -1,10 +1,216 @@
 .about-contents {
-  background-color: peachpuff;
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  height: 31vh;
   .container {
     padding: 150px 60px 0px 60px;
-    color: red;
+    .section-1 {
+      margin-top: 1vh;
+      display: flex;
+      align-items: flex-end;
+      .left-section1 {
+        flex: 40%;
+        img {
+          max-width: 400px;
+          border-radius: 20px;
+        }
+      }
+      .right-section1 {
+        flex: 70%;
+        padding-left: 40px;
+        p {
+          @include lato(normal);
+          padding: 100px 30px 0 0;
+          font-size: 18px;
+          line-height: 30px;
+          color: $textLight;
+        }
+      }
+    }
+    hr.divider-about {
+      margin: 100px 0 100px 0;
+      border: none;
+      height: 2px;
+      color: $textLight;
+      background-color: $textLight;
+    }
+
+    .section-2 {
+      margin-bottom: 150px;
+      .second-section2 {
+        .skillset-left {
+          float: left;
+          li {
+            margin: 30px 0;
+          }
+          .logo-ai {
+            @include iconBg(url("../icons/illustrator.svg"), 30px, 30px);
+          }
+          .logo-xd {
+            margin-top: 40px;
+            @include iconBg(url("../icons/xd.svg"), 30px, 30px);
+          }
+          .logo-html {
+            margin-top: 40px;
+            @include iconBg(url("../icons/html5.svg"), 30px, 30px);
+          }
+          .logo-sass {
+            margin-top: 40px;
+            @include iconBg(url("../icons/sass.svg"), 30px, 30px);
+          }
+          .logo-js {
+            margin-top: 40px;
+            @include iconBg(url("../icons/js.svg"), 30px, 30px);
+          }
+          .logo-node {
+            margin-top: 40px;
+            @include iconBg(url("../icons/node.svg"), 30px, 30px);
+          }
+        }
+
+        .skillset-right {
+          ul {
+            li {
+              position: relative;
+              list-style: none;
+              margin: 50px 0 50px 50px;
+              color: red;
+              padding: 10px 0;
+              &:before {
+                content: "";
+                position: absolute;
+                top: calc(100% + 10px);
+                left: 0;
+                width: 100%;
+                height: 30px;
+                background-color: $footerLight;
+                border-radius: 1000px;
+              }
+              &:after {
+                content: "";
+                position: absolute;
+                top: calc(100% + 10px);
+                left: 0;
+                width: 0;
+                height: 30px;
+                background-color: $blueLight;
+                border-radius: 1000px;
+                animation-duration: 0.7s;
+                animation-timing-function: ease;
+                animation-fill-mode: forwards;
+              }
+
+              &.ai:after {
+                animation-name: ai;
+              }
+              &.xd:after {
+                animation-name: xd;
+              }
+              &.html:after {
+                animation-name: html;
+              }
+              &.sass:after {
+                animation-name: sass;
+              }
+              &.js:after {
+                animation-name: js;
+              }
+              &.node:after {
+                animation-name: node;
+              }
+
+              @keyframes ai {
+                to {
+                  width: 90%;
+                }
+              }
+              @keyframes xd {
+                to {
+                  width: 82%;
+                }
+              }
+              @keyframes html {
+                to {
+                  width: 85%;
+                }
+              }
+              @keyframes sass {
+                to {
+                  width: 82%;
+                }
+              }
+              @keyframes js {
+                to {
+                  width: 75%;
+                }
+              }
+              @keyframes node {
+                to {
+                  width: 64%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//darkmode
+
+body.dark .about-contents {
+  .container {
+    .section-1 {
+      .right-section1 {
+        p {
+          color: $textDark;
+        }
+      }
+    }
+    hr.divider-about {
+      color: $textDark;
+      background-color: $textDark;
+    }
+
+    .section-2 {
+      .second-section2 {
+        .skillset-left {
+          li {
+          }
+          .logo-ai {
+            @include iconBg(url("../icons/illustrator_dark.svg"), 30px, 30px);
+          }
+          .logo-xd {
+            @include iconBg(url("../icons/xd_dark.svg"), 30px, 30px);
+          }
+          .logo-html {
+            @include iconBg(url("../icons/html5_dark.svg"), 30px, 30px);
+          }
+          .logo-sass {
+            @include iconBg(url("../icons/sass_dark.svg"), 30px, 30px);
+          }
+          .logo-js {
+            @include iconBg(url("../icons/js_dark.svg"), 30px, 30px);
+          }
+          .logo-node {
+            @include iconBg(url("../icons/node_dark.svg"), 30px, 30px);
+          }
+        }
+
+        .skillset-right {
+          ul {
+            li {
+              &:before {
+                background-color: $footerDark;
+              }
+              &:after {
+                background-color: $blueDark;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -1,3 +1,7 @@
+header {
+  animation: 1s ease-in 0s 1 introOpacity;
+}
+
 .home-contents {
   svg {
     position: fixed;
@@ -13,6 +17,11 @@
     display: block;
   }
   .s1 {
+    animation: 1s ease-in 0s 1 introOpacity;
+    background-image: url("../images/home_page1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     #greetings-1 {
       @include nunito(bold);
       font-size: 200px;
@@ -31,6 +40,11 @@
   }
 
   .s2 {
+    animation: 1s ease-in 0s 1 introOpacity;
+    background-image: url("../images/home_page2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     #greetings-2 {
       @include nunito(normal);
       font-size: 90px;
@@ -104,6 +118,7 @@ body.dark .home-contents svg {
 }
 
 body.dark .s1 {
+  background-image: url("../images/home_page1_dark.png");
   #greetings-1 {
     color: $blueDark;
   }
@@ -113,6 +128,7 @@ body.dark .s1 {
 }
 
 body.dark .s2 {
+  background-image: url("../images/home_page2_dark.png");
   #greetings-2 {
     color: $blueDark;
   }

@@ -1,0 +1,125 @@
+footer {
+  background-color: $footerLight;
+
+  .container {
+    position: relative;
+    margin: 0 auto;
+    height: 200px;
+    max-width: 1200px;
+    padding: 30px 60px 30px 60px;
+
+    .container-social {
+      float: left;
+      .logo-footer {
+        @include iconBg($dnyLight, 180px, 50px);
+      }
+      ul {
+        li {
+          display: inline-block;
+          margin-right: 20px;
+          .insta {
+            @include iconBg($instaLight, 28px, 28px);
+          }
+          .github {
+            @include iconBg($githubLight, 28px, 28px);
+          }
+          .linkedin {
+            @include iconBg($linkedinLight, 28px, 28px);
+          }
+        }
+      }
+    }
+
+    .container-links {
+      float: right;
+      margin-top: 8px;
+      ul {
+        li {
+          @include nunito(light);
+          text-transform: uppercase;
+          display: inline;
+          color: $textLight;
+          margin-left: 50px;
+          font-size: 18px;
+
+          .link {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+      }
+    }
+    hr {
+      clear: both;
+      margin: 120px 0 20px 0;
+      border: none;
+      background-color: $textLight;
+      color: $textLight;
+      height: 1.5px;
+      opacity: 0.5;
+    }
+    .container-copyright {
+      text-align: center;
+      span {
+        @include lato(bold);
+        font-size: 18px;
+        letter-spacing: 0.001em;
+        color: $textLight;
+      }
+      #random-text {
+        margin-top: 7px;
+        @include lato(normal);
+        font-size: 18px;
+        color: $textLight;
+      }
+    }
+  }
+}
+
+body.dark footer {
+  background-color: $footerDark;
+
+  .container {
+    .container-social {
+      .logo-footer {
+        @include iconBg($dnyDark, 180px, 50px);
+      }
+      ul {
+        li {
+          .insta {
+            @include iconBg($instaDark, 28px, 28px);
+          }
+          .github {
+            @include iconBg($githubDark, 28px, 28px);
+          }
+          .linkedin {
+            @include iconBg($linkedinDark, 28px, 28px);
+          }
+        }
+      }
+    }
+
+    .container-links {
+      ul {
+        li {
+          color: $textDark;
+          .link {
+          }
+        }
+      }
+    }
+    hr {
+      background-color: $textDark;
+      color: $textDark;
+    }
+    .container-copyright {
+      span {
+        @include lato(bold);
+        color: $textDark;
+      }
+      #random-text {
+        color: $textDark;
+      }
+    }
+  }
+}

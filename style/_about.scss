@@ -1,8 +1,10 @@
 .about-contents {
-  background-color: red;
-  width: 1200px;
+  background-color: peachpuff;
+  max-width: 1200px;
   margin: 0 auto;
-  height: 100vh;
+  height: 31vh;
   .container {
+    padding: 150px 60px 0px 60px;
+    color: red;
   }
 }

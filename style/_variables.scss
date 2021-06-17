@@ -53,6 +53,8 @@ $githubLight: url("../icons/github_light.png");
 $githubDark: url("../icons/github_dark.png");
 $linkedinLight: url("../icons/linkedin_light.png");
 $linkedinDark: url("../icons/linkedin_dark.png");
+$send: url("../icons/send.svg");
+$back: url("../icons/arrow-left.svg");
 
 @keyframes introOpacity {
   0% {
@@ -62,3 +64,16 @@ $linkedinDark: url("../icons/linkedin_dark.png");
     opacity: 1;
   }
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -70%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+$fadeInTime: 0.8s;

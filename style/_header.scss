@@ -7,26 +7,27 @@ header {
 
   .container {
     max-width: 1600px;
-    padding: 60px 60px;
+    padding: 50px 60px;
     position: relative;
     margin: 0 auto;
+
     .logo-header {
-      @include iconBg($dnyLight, 220px, 50px);
+      @include iconBg($dnyLight, 200px, 50px);
       float: left;
-      margin-top: -26px;
+      margin-top: -22px;
     }
 
     nav {
       float: right;
       margin: 0 auto;
-      margin-top: -12px;
+      margin-top: -10px;
       ul {
         display: inline-block;
         li {
           display: inline-block;
           color: $textLight;
           @include nunito(bold);
-          font-size: 18px;
+          font-size: 12pt;
           text-align: center;
           text-transform: uppercase;
           margin-right: 50px;
@@ -77,7 +78,7 @@ header {
           padding: 5px;
           height: 18px;
           width: 40px;
-          transform: scale(1.2);
+          transform: scale(1.1);
           .ball {
             background-color: #ffffff;
             background-image: url("../icons/sun.svg");
@@ -105,8 +106,15 @@ header {
   }
 }
 
-header.solid {
+.solidHeader {
   background-color: #ffffff;
+  transition: 0.2s linear;
+}
+
+.solidHeaderShadow {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px 5px #e1e1e1;
+  transition: 0.2s linear;
 }
 
 // darkmode version
@@ -114,7 +122,7 @@ body.dark header {
   transition: background 0.2s linear;
   .container {
     .logo-header {
-      @include iconBg($dnyDark, 220px, 50px);
+      @include iconBg($dnyDark, 200px, 50px);
     }
     nav {
       ul {
@@ -129,6 +137,13 @@ body.dark header {
   }
 }
 
-body.dark header.solid {
+body.dark header.solidHeader {
   background-color: #3e3e3e;
+  transition: 0.2s linear;
+}
+
+body.dark .solidHeaderShadow {
+  background-color: #3e3e3e;
+  box-shadow: 0px 0px 10px 5px #313131;
+  transition: 0.2s linear;
 }

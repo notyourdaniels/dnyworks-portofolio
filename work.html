@@ -3,18 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>My Works | dnyworks</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="shortcut icon" href="./icons/favicon.png" type="image/x-icon">  
         <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="./node_modules/sal.js/dist/sal.css">
         <script src="js/darkmode.js" defer></script>
         <script src="js/randomtext.js" defer></script>
+        <script src="js/shadowheader.js" defer></script>
     </head>
     <body>
-        <header class='solid'>
+        <header class='solidHeader' id="solidHeader">
             <div class='container'>
-                <a href='#' class='logo-header'></a>
+                <a href="./index.html" class='logo-header'></a>
                 <nav>
                     <ul>
                         <li><a class='link' href="./index.html">Home</a></li>
@@ -33,12 +35,86 @@
         </header>
 
         <div class='work-contents'>
-            <div class="container">dfsdf</div>
-        </div>
-        
-        <footer>
-            <div class='container'>
+            <div class="container">
+                <div class="section-1">
+                    <div class='universal-header'>
+                        <h1>My</h1>
+                        <h2>Works.</h2>
+                        <hr class='divider-universalHeader'>
+                    </div>
+                    
+                </div>
+
+                <div class="section-2">
+                    <a href="./works/01.html" class="coverWorks">
+                        <img src='./images/bodyshop_500px.png'>
+                        <div class="cover-middle">
+                            <div class="cover-next"></div>
+                            <div class="text-cover">
+                                <h1>The Body Shop</h1>
+                                <h2>Website Design</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./works/02.html" class="coverWorks">
+                        <img src='./images/balilivestream_500px.png'>
+                        <div class="cover-middle">
+                            <div class="cover-next"></div>
+                            <div class="text-cover">
+                                <h1>Bali Live Streaming</h1>
+                                <h2>Website Design</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./works/03.html" class="coverWorks ">
+                        <img src='./images/sanber_500px.png'>
+                        <div class="cover-middle">
+                            <div class="cover-next"></div>
+                            <div class="text-cover">
+                                <h1>Sanber App</h1>
+                                <h2>UI Design</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./works/04.html" class="coverWorks ">
+                        <img src='./images/sarilaut_500px.png'>
+                        <div class="cover-middle">
+                            <div class="cover-next"></div>
+                            <div class="text-cover">
+                                <h1>Sari Laut Kapasan</h1>
+                                <h2>GSM Layout Design</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./works/05.html" class="coverWorks ">
+                        <img src='./images/cilembus_500px.png'>
+                        <div class="cover-middle">
+                            <div class="cover-next"></div>
+                            <div class="text-cover">
+                                <h1>The Cilembus</h1>
+                                <h2>Packaging Design</h2>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="./works/06.html" class="coverWorks ">
+                        <img src='./images/theparang_500px.png'>
+                        <div class="cover-middle">
+                            <div class="cover-next"></div>
+                            <div class="text-cover">
+                                <h1>The Parang</h1>
+                                <h2>Typography Poster Design</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
                 
+            </div>
+        </div>
+
+        
+
+        <footer>
+            <div class='container'>       
                 <div class='container-social'>
                     <a href='./index.html' class='logo-footer'></a>
                     <ul>
@@ -63,6 +139,8 @@
                 </div>
             </div>
         </footer>
-       
+        <script src='./node_modules/sal.js/dist/sal.js'>
+        </script>
+        <script>sal()</script>
     </body>
 </html>

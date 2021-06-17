@@ -2,16 +2,19 @@
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
+
   .container {
-    padding: 150px 60px 0px 60px;
+    padding: 120px 60px 0px 60px;
+
     .section-1 {
+      animation: fadeIn $fadeInTime ease-out both;
       margin-top: 1vh;
       display: flex;
       align-items: flex-end;
       .left-section1 {
         flex: 40%;
         img {
-          max-width: 400px;
+          max-width: 350px;
           border-radius: 20px;
         }
       }
@@ -20,14 +23,15 @@
         padding-left: 40px;
         p {
           @include lato(normal);
-          padding: 100px 30px 0 0;
-          font-size: 18px;
+          padding: 10% 30% 0 0;
+          font-size: 12pt;
           line-height: 30px;
           color: $textLight;
         }
       }
     }
     hr.divider-about {
+      animation: 2s ease-in 0s 1 introOpacity;
       margin: 100px 0 100px 0;
       border: none;
       height: 2px;
@@ -36,6 +40,7 @@
     }
 
     .section-2 {
+      animation: fadeIn $fadeInTime ease-out both;
       margin-bottom: 150px;
       .second-section2 {
         .skillset-left {

@@ -1,7 +1,7 @@
 const randomText = [
   "🌙 Finally, I can sleep",
   "Continue to fight, continue to win.",
-  "Desain itu bersih, layout itu putih.",
+  "Nothing comes from rushing.",
 ];
 
 const random = Math.floor(Math.random() * randomText.length);

@@ -1,0 +1,117 @@
+.work-contents {
+  position: relative;
+  min-height: 800px;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 60px 0 60px;
+  display: flex;
+  align-items: center;
+  .container {
+    animation: fadeIn $fadeInTime ease-out both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-basis: 1200px;
+    .section-1 {
+      order: 1;
+      display: flex;
+      margin-right: 80px;
+    }
+
+    .section-2 {
+      display: flex;
+      flex-wrap: wrap;
+      order: 2;
+
+      .coverWorks {
+        position: relative;
+        flex: 1 0 30%;
+        margin: 5px;
+        justify-content: center;
+        align-items: center;
+        max-width: 300px;
+        max-height: 300px;
+        min-height: 200px;
+        min-width: 200px;
+        overflow: hidden;
+        border-radius: 20px;
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.25s, visibility 0.25s ease-in;
+        }
+
+        .cover-middle {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          transition: opacity 0.2s ease-in;
+          background: linear-gradient(to bottom, transparent 0%, black 100%);
+          opacity: 0;
+          .cover-next {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            @include iconBg($back, 25px, 25px);
+            transform: scaleX(-1);
+            background-position: center;
+            background-color: $blueLight;
+            border-radius: 100px;
+            width: 50px;
+            height: 50px;
+            box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.02),
+              0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+              0 12.5px 10px rgba(0, 0, 0, 0.035),
+              0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+              0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+              0 100px 80px rgba(0, 0, 0, 0.07);
+          }
+          .text-cover {
+            position: absolute;
+            padding: 25px;
+            bottom: 0px;
+            color: white;
+            h1 {
+              font-size: 24pt;
+              @include lato(bold);
+            }
+            h2 {
+              margin-top: 3px;
+              font-size: 18px;
+              @include lato(light);
+            }
+          }
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.2);
+          }
+          .cover-middle {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+//Dark Mode
+body.dark .work-contents {
+  .container {
+    .section-2 {
+      .cover-middle {
+        .cover-next {
+          background-color: $blueDark;
+        }
+      }
+    }
+  }
+}

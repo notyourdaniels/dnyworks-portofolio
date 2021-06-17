@@ -1,0 +1,205 @@
+.contact-contents {
+  position: relative;
+  min-height: 800px;
+  height: 100vh;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 110px 0px 60px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    animation: fadeIn $fadeInTime ease-out both;
+    .section-1 {
+      order: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .top-section {
+      }
+
+      .bottom-section {
+        p {
+          b {
+            @include nunito(bold);
+          }
+          @include nunito(light);
+          font-size: 14pt;
+          color: $textLight;
+          margin-bottom: 10px;
+        }
+
+        ul {
+          li {
+            display: inline-block;
+            margin-right: 35px;
+            .insta {
+              @include iconBg($instaLight, 35px, 35px);
+            }
+            .github {
+              @include iconBg($githubLight, 35px, 35px);
+            }
+            .linkedin {
+              @include iconBg($linkedinLight, 35px, 35px);
+            }
+          }
+        }
+      }
+    }
+
+    .section-2 {
+      order: 2;
+      margin: 0;
+      border-left: 3px solid;
+      border-color: $textLight;
+      height: 600px;
+      margin: 0 100px;
+    }
+
+    .section-3 {
+      color: $textLight;
+      order: 3;
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      p {
+        @include nunito(normal);
+        font-size: 14pt;
+      }
+
+      .input-contact {
+        li {
+          list-style: none;
+          margin: 20px 0;
+          input,
+          textarea {
+            overflow: auto;
+            padding: 0 30px;
+            width: 100%;
+            resize: none;
+            border: none;
+            border-radius: 15px;
+            height: 40px;
+            background-color: $footerLight;
+            color: $textLight;
+            @include lato(normal);
+            font-size: 12pt;
+            &:focus {
+              outline: none;
+            }
+          }
+          ::placeholder {
+            @include lato(normal);
+            color: $textLight;
+            opacity: 0.5;
+          }
+          textarea {
+            padding: 10px 30px;
+            height: 200px;
+          }
+        }
+
+        .button2 {
+          margin-top: 12%;
+          padding: 6px 30px 10px 0;
+          width: 150px;
+          height: 50px;
+          border: none;
+          border-radius: 50px;
+          background: $blueLight $send;
+          background-position: 86px 15px;
+          background-repeat: no-repeat;
+          background-size: 20px;
+          @include lato(bold);
+          font-size: 12pt;
+          color: white;
+          cursor: pointer;
+          transition: 200ms ease-in-out;
+          &:hover {
+            background: $blueDark $send;
+            background-position: 86px 15px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+//darkmode
+body.dark .contact-contents {
+  .container {
+    .section-1 {
+      .top-section {
+      }
+
+      .bottom-section {
+        p {
+          b {
+          }
+
+          color: $textDark;
+        }
+
+        ul {
+          li {
+            .insta {
+              @include iconBg($instaDark, 35px, 35px);
+            }
+            .github {
+              @include iconBg($githubDark, 35px, 35px);
+            }
+            .linkedin {
+              @include iconBg($linkedinDark, 35px, 35px);
+            }
+          }
+        }
+      }
+    }
+
+    .section-2 {
+      border-color: $textDark;
+    }
+
+    .section-3 {
+      color: $textDark;
+
+      p {
+      }
+
+      .input-contact {
+        li {
+          input,
+          textarea {
+            background-color: $footerDark;
+            color: $textDark;
+          }
+          ::placeholder {
+            color: $textDark;
+          }
+        }
+
+        .button2 {
+          background: $blueDark $send;
+          background-position: 86px 15px;
+          background-repeat: no-repeat;
+          background-size: 20px;
+
+          &:hover {
+            background: $blueLight $send;
+            background-position: 86px 15px;
+            background-repeat: no-repeat;
+            background-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

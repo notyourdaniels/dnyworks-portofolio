@@ -5,6 +5,7 @@
 @import "./footer";
 @import "./home";
 @import "./work";
+@import "./insideWork";
 @import "./contact";
 @import "./about";
 
@@ -28,13 +29,13 @@ body.dark {
   h1 {
     @include nunito(bold);
     text-transform: uppercase;
-    font-size: 55px;
+    font-size: 40pt;
     color: $textLight;
   }
   h2 {
     @include nunito(bold);
     text-transform: uppercase;
-    font-size: 55px;
+    font-size: 40pt;
     color: $blueLight;
     padding-bottom: 20px;
   }

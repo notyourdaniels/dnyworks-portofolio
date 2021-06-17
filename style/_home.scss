@@ -3,15 +3,6 @@ header.home {
 }
 
 .home-contents {
-  svg {
-    position: fixed;
-    z-index: -1;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    fill: #e3e3e3;
-    opacity: 60%;
-  }
   .section {
     text-align: center;
     display: block;
@@ -24,7 +15,7 @@ header.home {
     background-size: cover;
     #greetings-1 {
       @include nunito(bold);
-      font-size: 200px;
+      font-size: 130pt;
       color: $blueLight;
       opacity: 1;
       transition: opacity 1s ease-in-out; //must same with sleeptime on langchanger.js !
@@ -32,7 +23,7 @@ header.home {
     #action-swipe {
       @include lato(light);
       margin-top: -20px;
-      font-size: 25px;
+      font-size: 18pt;
       color: $textLight;
       opacity: 1;
       transition: opacity 1s ease-in-out; //must same with sleeptime on langchanger.js !
@@ -47,15 +38,15 @@ header.home {
     background-size: cover;
     #greetings-2 {
       @include nunito(normal);
-      font-size: 90px;
+      font-size: 50pt;
       color: $blueLight;
       opacity: 1;
       transition: opacity 1s ease-in-out; //must same with sleeptime on langchanger.js !
     }
     #greetings-3 {
       @include nunito(bold);
-      margin-top: -18px;
-      font-size: 90px;
+      margin-top: -10px;
+      font-size: 50pt;
       color: $blueLight;
       opacity: 1;
       transition: opacity 1s ease-in-out; //must same with sleeptime on langchanger.js !
@@ -63,7 +54,7 @@ header.home {
 
     #button-info {
       display: absolute;
-      margin-top: 70px;
+      margin-top: 4%;
       .button1 {
         @include nunito(bold);
         background-color: $blueLight;
@@ -75,7 +66,7 @@ header.home {
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 20px;
+        font-size: 15pt;
         width: 550px;
         transition: 200ms ease-in-out;
         &:hover {
@@ -97,7 +88,7 @@ header.home {
           text-align: center;
           text-decoration: none;
           display: inline-block;
-          font-size: 20px;
+          font-size: 15pt;
           width: 270px;
           margin: 15px 5px;
           transition: 200ms ease-in-out;

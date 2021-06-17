@@ -1,0 +1,149 @@
+.insidework-contents {
+  min-height: 800px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 10px 60px 0 60px;
+  max-width: 1600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .container {
+    animation: fadeIn $fadeInTime ease-out both;
+
+    display: flex;
+    align-items: center;
+
+    .section-1 {
+      margin-right: 80px;
+      min-width: 400px;
+      width: 80%;
+      height: auto;
+
+      .swiper-container {
+        border-radius: 30px;
+        .swiper-wrapper {
+          .swiper-slide {
+            img {
+              display: block;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 30px;
+            }
+          }
+        }
+
+        .swiper-scrollbar {
+          transform: rotate(90deg) translateY(-50%);
+          top: 50%;
+          left: 87%;
+          width: 15%;
+          height: 2%;
+          background-color: $footerLight;
+          opacity: 0.4;
+
+          //   USE THIS FOR PHONE VER
+          //   margin-left: auto;
+          //   margin-right: auto;
+          //   left: 0;
+          //   right: 0;
+          //   bottom: 30px;
+          //   width: 15%;
+          //   height: 1%;
+          //   background-color: $footerLight;
+        }
+
+        .swiper-scrollbar-drag {
+          background-color: $blueLight;
+        }
+      }
+    }
+
+    .section-2 {
+      width: 30%;
+      color: $textLight;
+      h1 {
+        @include nunito(bold);
+        text-transform: uppercase;
+        font-size: 20pt;
+        text-align: center;
+      }
+      h2 {
+        @include nunito(light);
+        text-transform: uppercase;
+        font-size: 14pt;
+        text-align: center;
+        margin-top: 10px;
+      }
+      hr {
+        margin: 10px auto 50px auto;
+        border: none;
+        background-color: $textLight;
+        color: $textLight;
+        height: 2px;
+        width: 150px;
+      }
+      p {
+        @include lato(light);
+        font-size: 14pt;
+        line-height: 1.5;
+      }
+      h3 {
+        margin-top: 30px;
+        @include lato(normal);
+        font-size: 12pt;
+        opacity: 0.5;
+      }
+
+      .button-back {
+        margin-top: 12%;
+        padding: 7px 0px 10px 30px;
+        width: 150px;
+        height: 50px;
+        border: none;
+        border-radius: 50px;
+        background: $blueLight $back;
+        background-position: 26px 15px;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        @include lato(bold);
+        font-size: 12pt;
+        color: white;
+        cursor: pointer;
+        transition: 200ms ease-in-out;
+        &:hover {
+          background: $blueDark $back;
+          background-position: 26px 15px;
+          background-repeat: no-repeat;
+          background-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+//darkmode
+body.dark .insidework-contents {
+  .container {
+    .section-2 {
+      color: $textDark;
+      hr {
+        background-color: $textDark;
+        color: $textDark;
+      }
+
+      .button-back {
+        background: $blueDark $back;
+        background-position: 26px 15px;
+        background-repeat: no-repeat;
+        background-size: 20px;
+        &:hover {
+          background: $blueLight $back;
+          background-position: 26px 15px;
+          background-repeat: no-repeat;
+          background-size: 20px;
+        }
+      }
+    }
+  }
+}

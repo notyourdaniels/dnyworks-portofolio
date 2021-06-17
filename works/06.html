@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Inside Works | dnyworks</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="../icons/favicon.png" type="image/x-icon">  
+        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.css">
+        <script src="../js/darkmode.js" defer></script>
+        <script src="../js/randomtext.js" defer></script>
+        <script src="../js/shadowheader.js" defer></script>
+    </head>
+    <body>
+        <header class='solidHeader' id="solidHeader">
+            <div class='container'>
+                <a href="../index.html" class='logo-header'></a>
+                <nav>
+                    <ul>
+                        <li><a class='link' href="../index.html">Home</a></li>
+                        <li><a class='link' href="../about.html">About</a></li>
+                        <li><a class='link' href="../work.html">Work</a></li>
+                        <li><a class='link' href="../contact.html">Contact</a></li>
+                    </ul>
+                    <div class='darkslider'>
+                        <input type="checkbox" class="checkbox" id="check" />
+                        <label class="label" for="check">
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class='insidework-contents'>
+            <div class="container">
+                <div class="section-1">
+                    <div class="swiper-container insidewImg">
+                        <div class="swiper-wrapper">
+                             <div class="swiper-slide"><img src='../images/theparang_1080px_01.jpg'></div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+    
+                <div class="section-2">
+                    <h1>The Parang</h1>  
+                    <h2>Typography Poster Design</h2>
+                    <hr>
+                    <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed adipiscing diam donec adipiscing. Varius morbi enim nunc faucibus a pellentesque sit amet. Ac feugiat sed lectus vestibulum.
+                    </p>
+                    <h3>Scroll down for more images...</h3>
+                    <a href='../work.html'>
+                        <button type="button" class='button-back'>
+                            Go Back
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        
+
+        <footer>
+            <div class='container'>       
+                <div class='container-social'>
+                    <a href='./index.html' class='logo-footer'></a>
+                    <ul>
+                        <li><a class='insta' target="_blank" href="https://www.instagram.com/danielhalimw/"></a></li>
+                        <li><a class='github' target="_blank" href="https://github.com/notyourdaniels"></a></li>
+                        <li><a class='linkedin' target="_blank" href="https://www.linkedin.com/in/danielhalimw"></a></li>
+                    </ul>
+                </div>
+                <div class='container-links'>
+                    <ul>
+                        <ul>
+                            <li><a class='link' href="../about.html">About</a></li>
+                            <li><a class='link' href="../work.html">My Works</a></li>
+                            <li><a class='link' href="../contact.html">Contact Me</a></li>
+                        </ul>
+                    </ul>
+                </div>
+                <hr>
+                <div class='container-copyright'>
+                    <span>Copyright 2021 © dnyworks.</span>
+                    <div id='random-text'>[My random text here]</div>
+                </div>
+            </div>
+        </footer>
+
+        <script src='../node_modules/swiper/swiper-bundle.min.js'></script>
+        <script>
+          var swiper = new Swiper(".insidewImg", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: false,
+        grabCursor: true,
+        mousewheel: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+        </script>
+    </body>
+</html>

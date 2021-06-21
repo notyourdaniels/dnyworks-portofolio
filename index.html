@@ -10,63 +10,94 @@
         <link rel="stylesheet" href="style/style.css">
         <link rel="stylesheet" href="./node_modules/fullpage.js/dist/fullpage.css">
         <script src='js/langchanger.js' defer></script>
-        <script src="js/darkmode.js" defer></script>
+        <script src="js/main.js" defer></script>
     </head>
     <body>
-        <script src='js/start.js'></script>
-        <header class="home">
+        <header class='home'>
             <div class='container'>
                 <a href="./index.html" class='logo-header'></a>
+                <div class="burger-menu" id='burger-menu'></div>
                 <nav>
-                    <ul>
-                        <li><a class='link' href="./index.html">Home</a></li>
-                        <li><a class='link' href="./about.html">About</a></li>
-                        <li><a class='link' href="./work.html">Work</a></li>
-                        <li><a class='link' href="./contact.html">Contact</a></li>
-                    </ul>
-                    <div class='darkslider'>
-                        <input type="checkbox" class="checkbox" id="check" />
-                        <label class="label" for="check">
-                            <div class="ball"></div>
-                        </label>
+                    <div class="container-nav">
+                        <div class="cross-burger" id='cross-burger'></div>
+                        <ul>
+                            <li><a class='link' href="./index.html">Home</a></li>
+                            <li><a class='link' href="./about.html">About</a></li>
+                            <li><a class='link' href="./work.html">Work</a></li>
+                            <li><a class='link' href="./contact.html">Contact</a></li>
+                        </ul>
+                        <div class='darkslider'>
+                            <input type="checkbox" class="checkbox" id="check" />
+                            <label class="label" for="check">
+                                <div class="ball"></div>
+                            </label>
+                         </div>
                     </div>
                 </nav>
             </div>
         </header>
         
-        <div class='home-contents'>
-            <div id="fullPage">
-                <div class="section s1">
-                    <div id='greetings-1'>Hello</div>
-                    <div id='action-swipe'>swipe down</div>
-                </div>
-                <div class="section s2">
-                    <div id='greetings-2'>Welcome to My</div>
-                    <div id='greetings-3'>Portfolio !</div>
-                    <div id='button-info'>
-                        <a href="./work.html">
-                            <button type="button" class=button1>Check Out my Work</button>
-                        </a>
-                        <div id='button-container'>
+        <div class="mobile-ver">
+            <div class="container-mobile">
+                <div id='greetings-1-mobile'>Hello</div>
+                <div id='greetings-2-mobile'>Welcome to My</div>
+                <div id='greetings-3-mobile'>Portfolio !</div> 
+                <div id='button-container-mobile'>
+                    <ul>
+                        <li>
+                            <a href="./work.html">
+                                <button class=button1>Check Out my Work</button>
+                            </a>
+                        </li>
+                        <li>
                             <a href="./about.html">
-                                <button type="button" class=button2>About Me</button>
+                                <button class="button2">About Me</button>
                             </a>
+                        </li>
+                        <li>
                             <a href="./contact.html">
-                                <button type="button" class=button2>Contact Me</button>
+                                <button class="button2">Contact Me</button>
                             </a>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+
+        <div class='home-contents'>
+                <div id="fullPage">
+                    <div class="section s1">
+                        <div id='greetings-1'>Hello</div>
+                        <div id='action-swipe'>swipe down</div>
+                    </div>
+                    <div class="section s2">
+                        <div id='greetings-2'>Welcome to My</div>
+                        <div id='greetings-3'>Portfolio !</div>
+                        <div id='button-info'>
+                            <a href="./work.html">
+                                <button type="button" class=button1>Check Out my Work</button>
+                            </a>
+                            <div id='button-container'>
+                                <a href="./about.html" class=button2>
+                                   About Me
+                                </a>
+                                <a href="./contact.html" class=button2>
+                                    Contact Me
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+        </div>
+
+        
         <script src='./node_modules/fullpage.js/dist/fullpage.js'></script>
         <script>
             new fullpage('#fullPage', {
                 anchors: ['page1', 'page2'],
                 navigationTooltips: ['Hello', 'Welcome'],
                 autoScrolling: true,
-                scrollHorizontally: true,
-                navigation: true,
+                scrollHorizontally: true
             })
         </script>
         

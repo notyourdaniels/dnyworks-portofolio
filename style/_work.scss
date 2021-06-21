@@ -1,19 +1,17 @@
 .work-contents {
-  position: relative;
   min-height: 800px;
   height: 100vh;
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px 60px 0 60px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   .container {
     animation: fadeIn $fadeInTime ease-out both;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    flex-basis: 1200px;
+    max-width: 1200px;
     .section-1 {
       order: 1;
       display: flex;
@@ -112,6 +110,49 @@ body.dark .work-contents {
           background-color: $blueDark;
         }
       }
+    }
+  }
+}
+
+//mobile version
+@media only screen and (max-width: 960px) {
+  .work-contents {
+    display: block;
+    min-height: 900px;
+    .container {
+      display: block;
+      margin-top: 18%;
+      .section-1 {
+        display: block;
+        margin-bottom: 50px;
+      }
+
+      .section-2 {
+        .coverWorks {
+          max-width: 300px;
+          max-height: 300px;
+          min-height: 150px;
+          min-width: 150px;
+          .cover-middle {
+            .text-cover {
+              h1 {
+                font-size: 18pt;
+              }
+              h2 {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .work-contents {
+    padding: 50px 30px;
+    .container {
     }
   }
 }

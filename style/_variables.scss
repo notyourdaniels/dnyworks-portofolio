@@ -47,6 +47,8 @@ $footerDark: #575555;
 //ICON n LOGO
 $dnyLight: url("../icons/logo_light.png");
 $dnyDark: url("../icons/logo_dark.png");
+$dnyLightMobile: url("../icons/logo_light_mobile.png");
+$dnyDarkMobile: url("../icons/logo_dark_mobile.png");
 $instaLight: url("../icons/insta_light.png");
 $instaDark: url("../icons/insta_dark.png");
 $githubLight: url("../icons/github_light.png");
@@ -55,7 +57,9 @@ $linkedinLight: url("../icons/linkedin_light.png");
 $linkedinDark: url("../icons/linkedin_dark.png");
 $send: url("../icons/send.svg");
 $back: url("../icons/arrow-left.svg");
-
+$cross: url("../icons/cross.svg");
+$burgerLight: url("../icons/burgermenu_light.svg");
+$burgerDark: url("../icons/burgermenu_dark.svg");
 @keyframes introOpacity {
   0% {
     opacity: 0;

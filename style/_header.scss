@@ -3,8 +3,7 @@ header {
   width: 100%;
   background-color: transparent;
   margin: 0;
-  z-index: 3;
-
+  z-index: 10;
   .container {
     max-width: 1600px;
     padding: 50px 60px;
@@ -21,85 +20,87 @@ header {
       float: right;
       margin: 0 auto;
       margin-top: -10px;
-      ul {
-        display: inline-block;
-        li {
+      .container-nav {
+        ul {
           display: inline-block;
-          color: $textLight;
-          @include nunito(bold);
-          font-size: 12pt;
-          text-align: center;
-          text-transform: uppercase;
-          margin-right: 50px;
-          .link {
-            cursor: pointer;
-            text-decoration: none;
-            position: relative;
-            margin-bottom: 0px;
-            padding-bottom: 5px;
-            color: inherit;
-            border-bottom: 5px solid transparent;
-            transition: 300ms ease-in-out;
-            &::after {
-              content: "";
-              position: absolute;
-              right: 0px;
-              width: 0px;
-              bottom: -5px;
-              background-color: $textLight;
-              height: 5px;
-              transition: width 300ms ease-in-out;
-            }
+          li {
+            display: inline-block;
+            color: $textLight;
+            @include nunito(bold);
+            font-size: 12pt;
+            text-align: center;
+            text-transform: uppercase;
+            margin-right: 50px;
+            .link {
+              cursor: pointer;
+              text-decoration: none;
+              position: relative;
+              margin-bottom: 0px;
+              padding-bottom: 5px;
+              color: inherit;
+              border-bottom: 5px solid transparent;
+              transition: 300ms ease-in-out;
+              &::after {
+                content: "";
+                position: absolute;
+                right: 0px;
+                width: 0px;
+                bottom: -5px;
+                background-color: $textLight;
+                height: 5px;
+                transition: width 300ms ease-in-out;
+              }
 
-            &:focus::after,
-            &:hover::after {
-              left: 0px;
-              right: auto;
-              width: 100%;
+              &:focus::after,
+              &:hover::after {
+                left: 0px;
+                right: auto;
+                width: 100%;
+              }
             }
           }
         }
-      }
 
-      .darkslider {
-        float: right;
-        margin-top: -19px;
-        display: block;
-        .checkbox {
-          opacity: 0;
-        }
+        .darkslider {
+          float: right;
+          margin-top: -19px;
+          display: block;
+          .checkbox {
+            opacity: 0;
+          }
 
-        .label {
-          background-color: #c9cece;
-          border-radius: 50px;
-          cursor: pointer;
-          display: flex;
-          align-items: center;
-          padding: 5px;
-          height: 18px;
-          width: 40px;
-          transform: scale(1.1);
-          .ball {
-            background-color: #ffffff;
-            background-image: url("../icons/sun.svg");
-            background-size: contain;
-            background-size: 12px;
-            background-repeat: no-repeat;
-            background-position: center;
-            border-radius: 50%;
-            position: absolute;
-            height: 20px;
-            width: 20px;
-            transform: translateX(0px);
+          .label {
+            background-color: #c9cece;
+            border-radius: 50px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            height: 18px;
+            width: 40px;
+            transform: scale(1.1);
+            .ball {
+              background-color: #ffffff;
+              background-image: url("../icons/sun.svg");
+              background-size: contain;
+              background-size: 12px;
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 50%;
+              position: absolute;
+              height: 20px;
+              width: 20px;
+              transform: translateX(0px);
+              transition: 0.2s linear;
+            }
+          }
+
+          .checkbox:checked + .label .ball {
+            transform: translateX(21px);
+            background-image: url("../icons/moon.svg");
+            background-color: #3e3e3e;
             transition: 0.2s linear;
           }
-        }
-
-        .checkbox:checked + .label .ball {
-          transform: translateX(21px);
-          background-image: url("../icons/moon.svg");
-          background-color: #3e3e3e;
-          transition: 0.2s linear;
         }
       }
     }
@@ -107,7 +108,7 @@ header {
 }
 
 .solidHeader {
-  background-color: #ffffff;
+  background-color: white;
   transition: 0.2s linear;
 }
 
@@ -125,11 +126,13 @@ body.dark header {
       @include iconBg($dnyDark, 200px, 50px);
     }
     nav {
-      ul {
-        li {
-          color: $textDark;
-          .link::after {
-            background-color: $textDark;
+      .container-nav {
+        ul {
+          li {
+            color: $textDark;
+            .link::after {
+              background-color: $textDark;
+            }
           }
         }
       }
@@ -146,4 +149,104 @@ body.dark .solidHeaderShadow {
   background-color: #3e3e3e;
   box-shadow: 0px 0px 10px 5px #313131;
   transition: 0.2s linear;
+}
+
+//for mobile ver
+@media only screen and (max-width: 960px) {
+  header {
+    .container {
+      .burger-menu {
+        @include iconBg($burgerLight, 30px, 30px);
+        float: right;
+        margin-top: -10px;
+      }
+
+      nav {
+        transform: translateX(100%);
+        clear: both;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        background-color: $footerLight;
+        opacity: 1;
+        height: 100%;
+        width: 300px;
+        border-radius: 30px 0 0 30px;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        .container-nav {
+          margin: 30px 45px;
+          .cross-burger {
+            @include iconBg($cross, 20px, 20px);
+            background-position: center;
+            border-radius: 50px;
+            padding: 20px 35px;
+            background-color: $blueLight;
+            float: right;
+          }
+          ul {
+            clear: both;
+            display: block;
+            padding: 40px 0 20px 0;
+            li {
+              display: block;
+              margin: 22px 0;
+              text-align: left;
+              font-size: 14pt;
+              font-weight: 400;
+            }
+          }
+
+          .darkslider {
+            float: left;
+          }
+        }
+      }
+    }
+
+    nav.nav-mobile {
+      transform: translateX(0%);
+      box-shadow: 0 0px 6.6px rgba(0, 0, 0, 0.042),
+        0 0px 15.8px rgba(0, 0, 0, 0.061), 0 0px 29.7px rgba(0, 0, 0, 0.075),
+        0 0px 52.9px rgba(0, 0, 0, 0.089), 0 0px 99px rgba(0, 0, 0, 0.108),
+        0 0px 237px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  //darkmode
+  body.dark header {
+    .container {
+      .burger-menu {
+        @include iconBg($burgerDark, 30px, 30px);
+      }
+      .nav-mobile {
+        background-color: $footerDark;
+        .container-nav {
+          .cross-burger {
+            background-color: $blueDark;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  header {
+    .container {
+      padding: 50px 30px;
+      .logo-header {
+        @include iconBg($dnyLightMobile, 40px, 40px);
+      }
+    }
+  }
+
+  body.dark header {
+    .container {
+      .logo-header {
+        @include iconBg($dnyDarkMobile, 40px, 40px);
+      }
+    }
+  }
 }

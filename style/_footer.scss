@@ -1,76 +1,83 @@
 footer {
+  margin-top: 100px;
+  display: block;
   background-color: $footerLight;
-
+  width: 100%;
   .container {
     position: relative;
     margin: 0 auto;
-    height: 180px;
+    height: 100%;
     max-width: 1200px;
     padding: 30px 60px 30px 60px;
-
-    .container-social {
-      float: left;
+    .container-top {
       .logo-footer {
+        float: left;
         @include iconBg($dnyLight, 170px, 50px);
       }
-      ul {
-        li {
-          display: inline-block;
-          margin-right: 20px;
-          .insta {
-            @include iconBg($instaLight, 25px, 25px);
+
+      .container-links {
+        float: right;
+        margin-top: 8px;
+        ul {
+          li {
+            @include nunito(light);
+            text-transform: uppercase;
+            display: inline;
+            color: $textLight;
+            margin-left: 50px;
+            font-size: 12pt;
+
+            .link {
+              text-decoration: none;
+              color: inherit;
+            }
           }
-          .github {
-            @include iconBg($githubLight, 25px, 25px);
-          }
-          .linkedin {
-            @include iconBg($linkedinLight, 25px, 25px);
+        }
+      }
+
+      .container-social {
+        clear: both;
+        ul {
+          li {
+            display: inline-block;
+            margin: 0 10px;
+            .insta {
+              @include iconBg($instaLight, 25px, 25px);
+            }
+            .github {
+              @include iconBg($githubLight, 25px, 25px);
+            }
+            .linkedin {
+              @include iconBg($linkedinLight, 25px, 25px);
+            }
           }
         }
       }
     }
-
-    .container-links {
-      float: right;
-      margin-top: 8px;
-      ul {
-        li {
-          @include nunito(light);
-          text-transform: uppercase;
-          display: inline;
-          color: $textLight;
-          margin-left: 50px;
+    .container-bottom {
+      hr {
+        clear: both;
+        margin: 40px 0 20px 0;
+        border: none;
+        background-color: $textLight;
+        color: $textLight;
+        height: 1.5px;
+        opacity: 0.5;
+      }
+      .container-copyright {
+        text-align: center;
+        span {
+          @include lato(bold);
           font-size: 12pt;
-
-          .link {
-            text-decoration: none;
-            color: inherit;
-          }
+          letter-spacing: 0.001em;
+          color: $textLight;
         }
-      }
-    }
-    hr {
-      clear: both;
-      margin: 120px 0 20px 0;
-      border: none;
-      background-color: $textLight;
-      color: $textLight;
-      height: 1.5px;
-      opacity: 0.5;
-    }
-    .container-copyright {
-      text-align: center;
-      span {
-        @include lato(bold);
-        font-size: 12pt;
-        letter-spacing: 0.001em;
-        color: $textLight;
-      }
-      #random-text {
-        margin-top: 2px;
-        @include lato(normal);
-        font-size: 12pt;
-        color: $textLight;
+        #random-text {
+          margin-top: 2px;
+          @include lato(normal);
+          font-size: 12pt;
+          color: $textLight;
+        }
       }
     }
   }
@@ -78,47 +85,93 @@ footer {
 
 body.dark footer {
   background-color: $footerDark;
-
+  transition: background 0.2s linear;
   .container {
-    .container-social {
+    .container-top {
       .logo-footer {
         @include iconBg($dnyDark, 170px, 50px);
       }
-      ul {
-        li {
-          .insta {
-            @include iconBg($instaDark, 25px, 25px);
+
+      .container-links {
+        ul {
+          li {
+            color: $textDark;
           }
-          .github {
-            @include iconBg($githubDark, 25px, 25px);
-          }
-          .linkedin {
-            @include iconBg($linkedinDark, 25px, 25px);
+        }
+      }
+
+      .container-social {
+        ul {
+          li {
+            .insta {
+              @include iconBg($instaDark, 25px, 25px);
+            }
+            .github {
+              @include iconBg($githubDark, 25px, 25px);
+            }
+            .linkedin {
+              @include iconBg($linkedinDark, 25px, 25px);
+            }
           }
         }
       }
     }
 
-    .container-links {
-      ul {
-        li {
+    .container-bottom {
+      hr {
+        background-color: $textDark;
+        color: $textDark;
+      }
+      .container-copyright {
+        span {
+          @include lato(bold);
           color: $textDark;
-          .link {
-          }
+        }
+        #random-text {
+          color: $textDark;
         }
       }
     }
-    hr {
-      background-color: $textDark;
-      color: $textDark;
-    }
-    .container-copyright {
-      span {
-        @include lato(bold);
-        color: $textDark;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  footer {
+    .container {
+      height: 100%;
+      .container-top {
+        .logo-footer {
+          display: block;
+          margin: 0 auto;
+          background-size: 170px;
+          width: 170px;
+          float: none;
+        }
+        .container-links {
+          float: none;
+          text-align: center;
+          margin-top: 5px;
+          ul {
+            li {
+              margin: 0 25px;
+            }
+          }
+        }
+        .container-social {
+          text-align: center;
+          margin-top: 35px;
+        }
       }
-      #random-text {
-        color: $textDark;
+    }
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  footer .container .container-top .container-links {
+    ul {
+      li {
+        display: block;
+        margin: 20px 0px;
       }
     }
   }

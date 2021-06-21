@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="124" height="124" viewBox="0 0 124 124">
+  <defs>
+    <clipPath id="clip-burgermenu_light">
+      <rect width="124" height="124"/>
+    </clipPath>
+  </defs>
+  <g id="burgermenu_light" clip-path="url(#clip-burgermenu_light)">
+    <g id="Group_86" data-name="Group 86" transform="translate(-310 -24.798)">
+      <rect id="Rectangle_189" data-name="Rectangle 189" width="124" height="22" rx="11" transform="translate(310 111.798)" fill="#50504f"/>
+      <rect id="Rectangle_190" data-name="Rectangle 190" width="124" height="23" rx="11.5" transform="translate(310 75.798)" fill="#50504f"/>
+      <rect id="Rectangle_191" data-name="Rectangle 191" width="124" height="22" rx="11" transform="translate(310 40.798)" fill="#50504f"/>
+    </g>
+  </g>
+</svg>

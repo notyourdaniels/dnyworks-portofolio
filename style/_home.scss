@@ -1,11 +1,94 @@
 header.home {
   animation: 1s ease-in 0s 1 introOpacity;
 }
+.mobile-ver {
+  overflow: scroll;
+  opacity: 0;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../images/home_page1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .container-mobile {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    #greetings-1-mobile {
+      @include nunito(bold);
+      font-size: 80pt;
+      color: $blueLight;
+      opacity: 1;
+      text-align: center;
+    }
+    #greetings-2-mobile,
+    #greetings-3-mobile {
+      @include nunito(normal);
+      font-size: 16pt;
+      text-align: center;
+      color: $textLight;
+    }
+
+    #greetings-3-mobile {
+      @include nunito(bold);
+      margin-bottom: 50px;
+    }
+    #button-container-mobile {
+      margin: 0 auto;
+      ul {
+        li {
+          list-style-type: none;
+          text-align: center;
+          margin: 20px 0;
+          a {
+            button {
+              text-decoration: none;
+              cursor: pointer;
+              @include nunito(bold);
+              font-size: 14pt;
+              text-align: center;
+              border-radius: 50px;
+              padding: 15px;
+              width: 300px;
+              transition: 200ms ease-in-out;
+            }
+            .button1 {
+              background-color: $blueLight;
+              color: white;
+              border: none;
+              &:hover {
+                background-color: $buttonHoverLight;
+              }
+            }
+            .button2 {
+              @include nunito(bold);
+              position: relative;
+              background-color: transparent;
+              border: 2px solid $blueLight;
+              color: $blueLight;
+              &:hover {
+                border-color: transparent;
+                background-color: $blueLight;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 .home-contents {
+  position: fixed;
   .section {
     text-align: center;
     display: block;
+    position: relative;
   }
   .s1 {
     animation: 1s ease-in 0s 1 introOpacity;
@@ -77,6 +160,8 @@ header.home {
       #button-container {
         margin: 0 auto;
         .button2 {
+          appearance: button;
+          text-decoration: none;
           @include nunito(bold);
           position: relative;
           background-color: transparent;
@@ -89,7 +174,7 @@ header.home {
           text-decoration: none;
           display: inline-block;
           font-size: 15pt;
-          width: 270px;
+          width: 235px;
           margin: 15px 5px;
           transition: 200ms ease-in-out;
           &:hover {
@@ -143,5 +228,51 @@ body.dark .s2 {
         }
       }
     }
+  }
+}
+
+body.dark .mobile-ver {
+  background-image: url("../images/home_page1_dark.png");
+  .container-mobile {
+    animation: 1s ease-in 0s 1 introOpacity;
+    #greetings-1-mobile {
+      color: $blueDark;
+    }
+    #greetings-2-mobile,
+    #greetings-3-mobile {
+      color: $textDark;
+    }
+    #button-container-mobile {
+      ul {
+        li {
+          .button1 {
+            background-color: $blueDark;
+            &:hover {
+              background-color: $blueLight;
+            }
+          }
+
+          .button2 {
+            border-color: $blueDark;
+            color: $blueDark;
+            &:hover {
+              background-color: $blueDark;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//for mobile version
+@media only screen and (max-width: 960px) {
+  .mobile-ver {
+    opacity: 1;
+  }
+
+  .home-contents {
+    opacity: 0;
   }
 }

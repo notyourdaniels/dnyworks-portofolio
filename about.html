@@ -51,7 +51,7 @@
                     </div>
                 </div>
                     
-                <hr class='divider-about'>
+                <hr class='divider-about' id='waypoint-skills'>
                 <div class='section-2'>
                     <div class="first-section2">
                         <div class='universal-header'>
@@ -123,5 +123,12 @@
                 </div>
             </div>
         </footer>
+        <script src="./js/ScrollMagic.min.js"></script>
+        <script>
+            var controller = new ScrollMagic.Controller();
+        	var scene = new ScrollMagic.Scene({triggerElement: "#waypoint-skills"})
+					.setClassToggle("li", "toggle-skills")
+					.addTo(controller);
+        </script>
     </body>
 </html>

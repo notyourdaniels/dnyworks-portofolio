@@ -159,6 +159,10 @@ body.dark .solidHeaderShadow {
         @include iconBg($burgerLight, 30px, 30px);
         float: right;
         margin-top: -10px;
+        cursor: pointer;
+        &:hover {
+          filter: invert(50%);
+        }
       }
 
       nav {
@@ -184,6 +188,10 @@ body.dark .solidHeaderShadow {
             padding: 20px 35px;
             background-color: $blueLight;
             float: right;
+            cursor: pointer;
+            &:hover {
+              background-color: $blueDark;
+            }
           }
           ul {
             clear: both;
@@ -225,6 +233,9 @@ body.dark .solidHeaderShadow {
         .container-nav {
           .cross-burger {
             background-color: $blueDark;
+            &:hover {
+              background-color: $blueLight;
+            }
           }
         }
       }

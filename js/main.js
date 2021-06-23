@@ -53,11 +53,13 @@ const randomText = [
   "🌙 Finally, I can sleep",
   "Continue to fight, continue to win.",
   "Nothing comes from rushing.",
-  "Actually, I'm not a big fan of coffee",
+  "Actually, I'm not a big fan of coffee anymore",
   "It cost $ 0.00 to be a nice person",
   "Relax, you got this !",
   "My first programming language is PASCAL",
   "Alien speaks Java language",
+  "Once you tried Sass, you'll never come back",
+  "Beep Beep Beep !",
 ];
 
 let random = 0;

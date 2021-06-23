@@ -2,10 +2,9 @@ header.home {
   animation: 1s ease-in 0s 1 introOpacity;
 }
 .mobile-ver {
-  overflow: scroll;
   opacity: 0;
   position: fixed;
-  z-index: 2;
+  z-index: -5;
   width: 100%;
   height: 100vh;
   background-image: url("../images/home_page1.png");
@@ -270,6 +269,7 @@ body.dark .mobile-ver {
 @media only screen and (max-width: 960px) {
   .mobile-ver {
     opacity: 1;
+    z-index: 2;
   }
 
   .home-contents {

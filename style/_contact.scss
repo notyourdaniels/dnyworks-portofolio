@@ -31,6 +31,13 @@
           font-size: 14pt;
           color: $textLight;
           margin-bottom: 10px;
+          a {
+            text-decoration: none;
+            color: inherit;
+            &:hover {
+              opacity: 0.5;
+            }
+          }
         }
 
         ul {
@@ -45,6 +52,9 @@
             }
             .linkedin {
               @include iconBg($linkedinLight, 35px, 35px);
+            }
+            &:hover {
+              opacity: 0.5;
             }
           }
         }
@@ -67,7 +77,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-
       p {
         @include nunito(normal);
         font-size: 14pt;
@@ -106,6 +115,7 @@
         }
 
         .button2 {
+          overflow: hidden;
           margin-top: 12%;
           padding: 6px 30px 10px 0;
           width: 150px;

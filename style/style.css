@@ -235,6 +235,11 @@ body.dark .solidHeaderShadow {
     height: 30px;
     float: right;
     margin-top: -10px;
+    cursor: pointer;
+  }
+  header .container .burger-menu:hover {
+    -webkit-filter: invert(50%);
+            filter: invert(50%);
   }
   header .container nav {
     -webkit-transform: translateX(100%);
@@ -269,6 +274,10 @@ body.dark .solidHeaderShadow {
     padding: 20px 35px;
     background-color: #008fff;
     float: right;
+    cursor: pointer;
+  }
+  header .container nav .container-nav .cross-burger:hover {
+    background-color: #44adff;
   }
   header .container nav .container-nav ul {
     clear: both;
@@ -305,6 +314,9 @@ body.dark .solidHeaderShadow {
   }
   body.dark header .container .nav-mobile .container-nav .cross-burger {
     background-color: #44adff;
+  }
+  body.dark header .container .nav-mobile .container-nav .cross-burger:hover {
+    background-color: #008fff;
   }
 }
 
@@ -550,10 +562,9 @@ header.home {
 }
 
 .mobile-ver {
-  overflow: scroll;
   opacity: 0;
   position: fixed;
-  z-index: 2;
+  z-index: -5;
   width: 100%;
   height: 100vh;
   background-image: url("../images/home_page1.png");
@@ -864,6 +875,7 @@ body.dark .mobile-ver .container-mobile #button-container-mobile ul li .button2:
 @media only screen and (max-width: 960px) {
   .mobile-ver {
     opacity: 1;
+    z-index: 2;
   }
   .home-contents {
     opacity: 0;
@@ -1225,7 +1237,7 @@ body.dark .insidework-contents .container .section-2 .button-back:hover {
   }
   .insidework-contents .container {
     display: block;
-    padding-top: 25%;
+    padding-top: 11vh;
   }
   .insidework-contents .container .section-1 {
     margin: 0;
@@ -1390,6 +1402,15 @@ body.dark .insidework-contents .container .section-2 .button-back:hover {
   font-weight: 700;
 }
 
+.contact-contents .container .section-1 .bottom-section p a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-contents .container .section-1 .bottom-section p a:hover {
+  opacity: 0.5;
+}
+
 .contact-contents .container .section-1 .bottom-section ul li {
   display: inline-block;
   margin-right: 35px;
@@ -1423,6 +1444,10 @@ body.dark .insidework-contents .container .section-2 .button-back:hover {
   background-size: 35px;
   width: 35px;
   height: 35px;
+}
+
+.contact-contents .container .section-1 .bottom-section ul li:hover {
+  opacity: 0.5;
 }
 
 .contact-contents .container .section-2 {
@@ -1520,6 +1545,7 @@ body.dark .insidework-contents .container .section-2 .button-back:hover {
 }
 
 .contact-contents .container .section-3 .input-contact .button2 {
+  overflow: hidden;
   margin-top: 12%;
   padding: 6px 30px 10px 0;
   width: 150px;
@@ -1868,7 +1894,7 @@ body.dark .contact-contents .container .section-3 .input-contact .button2:hover 
   border-radius: 1000px;
 }
 
-.about-contents .container .section-2 .second-section2 .skillset-right ul li:after {
+.about-contents .container .section-2 .second-section2 .skillset-right ul li.toggle-skills:after {
   content: "";
   position: absolute;
   top: calc(100% + 10px);
@@ -1885,32 +1911,32 @@ body.dark .contact-contents .container .section-3 .input-contact .button2:hover 
           animation-fill-mode: forwards;
 }
 
-.about-contents .container .section-2 .second-section2 .skillset-right ul li.ai:after {
+.about-contents .container .section-2 .second-section2 .skillset-right ul li.toggle-skills.ai:after {
   -webkit-animation-name: ai;
           animation-name: ai;
 }
 
-.about-contents .container .section-2 .second-section2 .skillset-right ul li.xd:after {
+.about-contents .container .section-2 .second-section2 .skillset-right ul li.toggle-skills.xd:after {
   -webkit-animation-name: xd;
           animation-name: xd;
 }
 
-.about-contents .container .section-2 .second-section2 .skillset-right ul li.html:after {
+.about-contents .container .section-2 .second-section2 .skillset-right ul li.toggle-skills.html:after {
   -webkit-animation-name: html;
           animation-name: html;
 }
 
-.about-contents .container .section-2 .second-section2 .skillset-right ul li.sass:after {
+.about-contents .container .section-2 .second-section2 .skillset-right ul li.toggle-skills.sass:after {
   -webkit-animation-name: sass;
           animation-name: sass;
 }
 
-.about-contents .container .section-2 .second-section2 .skillset-right ul li.js:after {
+.about-contents .container .section-2 .second-section2 .skillset-right ul li.toggle-skills.js:after {
   -webkit-animation-name: js;
           animation-name: js;
 }
 
-.about-contents .container .section-2 .second-section2 .skillset-right ul li.node:after {
+.about-contents .container .section-2 .second-section2 .skillset-right ul li.toggle-skills.node:after {
   -webkit-animation-name: node;
           animation-name: node;
 }
@@ -1985,15 +2011,6 @@ body.dark .contact-contents .container .section-3 .input-contact .button2:hover 
   to {
     width: 64%;
   }
-}
-
-body.dark .about-contents .container .section-1 {
-  margin: 0;
-}
-
-body.dark .about-contents .container .section-1 .right-section1 {
-  margin: 0;
-  padding: 0;
 }
 
 body.dark .about-contents .container .section-1 .right-section1 p {
@@ -2080,7 +2097,7 @@ body.dark .about-contents .container .section-2 .second-section2 .skillset-right
     height: max-content;
   }
   .about-contents .container .section-1 {
-    padding-top: 20%;
+    padding-top: 1vh;
     -webkit-animation: fadeIn 0.8s ease-out both;
             animation: fadeIn 0.8s ease-out both;
     display: block;
@@ -2113,7 +2130,7 @@ body.dark .about-contents .container .section-2 .second-section2 .skillset-right
 
 @media only screen and (max-width: 560px) {
   .about-contents .container {
-    padding: 50px 30px;
+    padding: 100px 30px;
   }
 }
 

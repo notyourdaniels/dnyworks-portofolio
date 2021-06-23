@@ -91,6 +91,9 @@
                 background-color: $footerLight;
                 border-radius: 1000px;
               }
+            }
+
+            li.toggle-skills {
               &:after {
                 content: "";
                 position: absolute;
@@ -167,10 +170,7 @@
 body.dark .about-contents {
   .container {
     .section-1 {
-      margin: 0;
       .right-section1 {
-        margin: 0;
-        padding: 0;
         p {
           color: $textDark;
         }
@@ -229,7 +229,7 @@ body.dark .about-contents {
     height: max-content;
     .container {
       .section-1 {
-        padding-top: 20%;
+        padding-top: 1vh;
         animation: fadeIn $fadeInTime ease-out both;
         display: block;
         width: 100%;
@@ -265,7 +265,7 @@ body.dark .about-contents {
 @media only screen and (max-width: 560px) {
   .about-contents {
     .container {
-      padding: 50px 30px;
+      padding: 100px 30px;
     }
   }
 }
